@@ -5,16 +5,16 @@ export default function Navbar(props) {
   return (
     <div>
       <section className="navbar-sec">
-        <div class="container-fluid">
-          <nav class="navbar  navbar-expand-lg navbar-light">
+        <div className="container-fluid">
+          <nav className="navbar  navbar-expand-lg navbar-light">
             {/* <!-- navbar brand --> */}
-            <a href="/" class="navbar-brand" id="nb">
+            <a href="/" className="navbar-brand" id="nb">
               {props.title}
             </a>
 
             {/* <!-- hamburger menu --> */}
             <button
-              class="navbar-toggler me-1"
+              className="navbar-toggler me-1"
               id="nbtn"
               type="button"
               data-bs-toggle="collapse"
@@ -23,35 +23,35 @@ export default function Navbar(props) {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
 
             {/* <!-- navbar er baaki shob jinish --> */}
-            <div class="collapse navbar-collapse" id="navtoggle">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" href="/">
+            <div className="collapse navbar-collapse" id="navtoggle">
+              <ul className="navbar-nav ms-auto">
+                <li className="nav-item">
+                  <a className="nav-link active" href="/">
                     {" "}
                     Home
                   </a>
                 </li>
 
-                <li class="nav-item" id="lg">
-                  <a class="nav-link" href="/">
+                <li className="nav-item" id="lg">
+                  <a className="nav-link" href="/">
                     {" "}
                     Education{" "}
                   </a>
                 </li>
 
-                <li class="nav-item" id="lg">
-                  <a class="nav-link" href="/">
+                <li className="nav-item" id="lg">
+                  <a className="nav-link" href="/">
                     {" "}
                     Projects{" "}
                   </a>
                 </li>
 
-                <li class="nav-item" id="lg">
-                  <a class="nav-link" href="/">
+                <li className="nav-item" id="lg">
+                  <a className="nav-link" href="/">
                     {" "}
                     Contact Me{" "}
                   </a>
