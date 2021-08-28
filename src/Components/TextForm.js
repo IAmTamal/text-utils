@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+import "../App.css";
 
 export default function TextForm(props) {
   const uppercase = () => {
@@ -42,6 +44,10 @@ export default function TextForm(props) {
                 rows="8"
                 value={text}
                 onChange={handleOnChange}
+                style={{
+                  backgroundColor: props.mode === "light" ? "white" : "#AEAEAE",
+                  color: props.mode === "light" ? "black" : "white",
+                }}
               ></textarea>
             </div>
           </form>
