@@ -3,6 +3,9 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
+import About from "./Components/About";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function App() {
   const [modes, setModes] = useState("light"); //wether dm is enabled or not
 
@@ -15,12 +18,22 @@ function App() {
       document.body.style.backgroundColor = "white";
     }
   };
+
   return (
     <>
-      <div className="dark-mode">
+      <Router>
         <Navbar title="Text-Utils" mode={modes} toggle={toggleMode} />
-        <TextForm mode={modes} toggle={toggleMode} />
-      </div>
+
+        {/* <About /> */}
+        <Switch>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/">
+            <TextForm mode={modes} toggle={toggleMode} />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -31,16 +32,16 @@ export default function Navbar(props) {
             <div className="collapse navbar-collapse" id="navtoggle">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <a className="nav-link active" href="/">
+                  <Link className="nav-link active" to="/">
                     {" "}
                     Home
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item" id="lg">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/about">
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item" id="lg">
