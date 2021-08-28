@@ -36,7 +36,13 @@ export default function TextForm(props) {
           <form>
             <div className="form-group">
               <label htmlFor="exampleFormControlTextarea1">
-                <h3>Enter text here</h3>
+                <h3
+                  style={{
+                    color: props.mode === "light" ? "black" : "white",
+                  }}
+                >
+                  Enter text here
+                </h3>
               </label>
               <textarea
                 className="form-control"
@@ -84,7 +90,12 @@ export default function TextForm(props) {
       <br />
 
       <section className="details-sec">
-        <div className="container">
+        <div
+          className="container"
+          style={{
+            color: props.mode === "light" ? "black" : "white",
+          }}
+        >
           <h4>This is your text summary</h4>
           <p>
             Total words: {text.split(" ").length} Total characters:{" "}
