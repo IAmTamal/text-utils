@@ -16,11 +16,17 @@ export default function TextForm(props) {
     setText(newText);
   };
 
+  const copytext = () => {
+    var txt = document.getElementById("my-txt");
+    // txt.select();
+    navigator.clipboard.writeText(txt.value);
+  };
+
   const handleOnChange = (event) => {
     setText(event.target.value);
   };
 
-  const [text, setText] = useState("Enter text here");
+  const [text, setText] = useState("");
   return (
     <>
       <section className="form-sec">
@@ -32,7 +38,7 @@ export default function TextForm(props) {
               </label>
               <textarea
                 className="form-control"
-                id="exampleFormControlTextarea1"
+                id="my-txt"
                 rows="8"
                 value={text}
                 onChange={handleOnChange}
@@ -58,6 +64,12 @@ export default function TextForm(props) {
               onClick={cleartext}
             >
               Clear text
+            </button>
+            <button
+              className="btn btn-outline-secondary mx-2"
+              onClick={copytext}
+            >
+              Copy text
             </button>
           </div>
         </div>
