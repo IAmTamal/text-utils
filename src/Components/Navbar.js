@@ -38,22 +38,13 @@ export default function Navbar(props) {
 
                 <li className="nav-item" id="lg">
                   <a className="nav-link" href="/">
-                    {" "}
-                    Education{" "}
+                    About
                   </a>
                 </li>
 
                 <li className="nav-item" id="lg">
                   <a className="nav-link" href="/">
-                    {" "}
-                    Projects{" "}
-                  </a>
-                </li>
-
-                <li className="nav-item" id="lg">
-                  <a className="nav-link" href="/">
-                    {" "}
-                    Contact Me{" "}
+                    Contact me
                   </a>
                 </li>
               </ul>
