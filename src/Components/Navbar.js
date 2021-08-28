@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../App.css";
 
 export default function Navbar(props) {
   return (
     <div>
       <section className="navbar-sec">
         <div className="container-fluid">
-          <nav className="navbar  navbar-expand-lg navbar-light">
+          <nav className={`navbar  navbar-expand-lg navbar-${props.mode}`}>
             {/* <!-- navbar brand --> */}
             <a href="/" className="navbar-brand" id="nb">
               {props.title}
@@ -48,6 +49,10 @@ export default function Navbar(props) {
                   </a>
                 </li>
               </ul>
+              <label className="switch">
+                <input type="checkbox" onClick={props.toggle} />
+                <span className="slider round"></span>
+              </label>
             </div>
             {/* <!-- end of navbar --> */}
           </nav>

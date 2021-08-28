@@ -28,7 +28,7 @@ export default function TextForm(props) {
 
   const [text, setText] = useState("");
   return (
-    <>
+    <div className="form-div">
       <section className="form-sec">
         <div className="container">
           <form>
@@ -87,6 +87,6 @@ export default function TextForm(props) {
           <p>{0.008 * text.split(" ").length} Minutes read</p>
         </div>
       </section>
-    </>
+    </div>
   );
 }
