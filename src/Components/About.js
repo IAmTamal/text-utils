@@ -10,6 +10,8 @@ export default function About() {
         about it. I have learned routers, state handlings, props and other basic
         logics through this project.
       </p>
+
+      <footer>Made with ❤ by Tamal.</footer>
     </div>
   );
 }
