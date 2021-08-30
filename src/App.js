@@ -9,7 +9,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   const [modes, setModes] = useState("light"); //wether dm is enabled or not
 
-  const toggleMode = () => {
+  const toggleMode = (cls) => {
+    //light and dark modes
     if (modes === "light") {
       setModes("dark");
       document.body.style.backgroundColor = "#525252";
